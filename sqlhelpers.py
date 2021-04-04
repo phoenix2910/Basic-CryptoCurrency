@@ -155,3 +155,4 @@ def sync_blockchain(blockchain):
 
     for block in blockchain.chain:
         blockchain_sql.insert(str(block.number), block.hash(), block.previous_hash, block.data, block.nonce)
+        
