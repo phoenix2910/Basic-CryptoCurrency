@@ -13,3 +13,4 @@ class SendMoneyForm(Form):
 
 class BuyForm(Form):
     amount = StringField('Amount', [validators.Length(min=1,max=50)])
+    
