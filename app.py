@@ -10,7 +10,6 @@ from functools import wraps
 #import other functions and classes
 from sqlhelpers import *
 from forms import *
-from passwords import _password
 #other dependencies
 import time
 
@@ -20,7 +19,7 @@ app = Flask(__name__)
 #configure mysql
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = _password
+app.config['MYSQL_PASSWORD'] ='password'
 app.config['MYSQL_DB'] = 'crypto'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
@@ -172,3 +171,5 @@ def index():
 if __name__ == '__main__':
     app.secret_key = 'secret'
     app.run(debug = True)
+
+    
